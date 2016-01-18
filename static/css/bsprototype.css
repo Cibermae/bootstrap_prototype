@@ -1,0 +1,80 @@
+#countyList,#provinceList{
+	width: 100%;
+	display: block;
+}
+optgroup{
+	display: none;
+}
+optgroup:first-child{
+	display: block;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+h1{
+	font-size: 1.6em;
+	margin: 1em 0 2em;
+	padding: 0;
+	text-transform: uppercase;
+}
+select{
+	box-sizing: border-box;
+	border: solid #ddd thin;
+	border-radius: 0.2em;
+	margin: 0.5em 0;
+}
+input[type="checkbox"]{
+	margin: 0 1em 0 0;
+	vertical-align: middle;
+}
+#searchtools{
+	margin-top: 2.5em;
+}
+#searchform{
+	position: relative;
+	height: 2em;
+}
+#searchform input[type="search"]{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 2em 0 0.5em;
+	position: relative;
+	z-index: 100;
+	border: solid thin #ddd;
+	height: 2em;
+	border-radius: 0.2em;
+}
+#searchform button{
+	position: absolute;
+	box-sizing: border-box;
+	border: solid thin #ddd;
+	top: 0;
+	right: 0;
+	z-index:200;
+	height: 100%;
+	width: 2em;
+	background-color: white;
+	border-radius: 0 0.2em 0.2em 0;
+}
+#searchform button:hover{
+	background-color: #eee;
+}
+#actions{
+	margin: 1em 0 0;
+	padding: 0 0 0 0.5em;
+}
+.action{
+	display: inline-block;
+	height: 1.6em;
+	width: 2em;
+	text-align: center;
+	margin: 0 0.5em;
+	border-radius: 0.2em;
+}
+.action:hover{
+	background-color: #eee;
+}
+td:last-child{
+	text-align: right;
+}
