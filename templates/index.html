@@ -3,9 +3,184 @@
 esto no se muesta :), solo lo contenido en el bloque
 Puede encontrar información relevante en https://docs.djangoproject.com/en/1.9/ref/templates/language/
 
-
 {% block content%}
 
-<h1 class="text-center"> Happy hacking. </h1>
+<h1 class="text-center">Distritos</h1>
+
+<div class="row">
+	<div class="col-md-3" id="searchtools">
+  
+  <form id="searchform"><input type="search" placeholder="Buscar"><button><span class="glyphicon glyphicon-search"></span></button></form>
+      <form id="filterform">
+    <select id="provinceList">
+      <option value="0">San José</option>
+      <option value="1">Alajuela</option>
+      <option value="2">Cartago</option>
+      <option value="3">Heredia</option>
+      <option value="4">Limón</option>
+      <option value="5">Guanacaste</option>
+      <option value="6">Puntarenas</option>
+    </select>
+    
+    <select id="countyList">
+    <optgroup>
+      <option value="101">San José</option>
+      <option value="102">Escazú</option>
+      <option value="103">Desamparados</option>
+      <option value="104">Puriscal</option>
+      <option value="105">Tarrazú</option>
+      <option value="106">Aserrí</option>
+      <option value="107">Mora</option>
+      <option value="108">Goicoechea</option>
+      <option value="109">Santa Ana</option>
+      <option value="110">Alajuelita</option>
+      <option value="111">Vázquez de Coronado</option>
+      <option value="112">Acosta</option>
+      <option value="113">Tibás</option>
+      <option value="114">Moravia</option>
+      <option value="115">Montes de Oca</option>
+      <option value="116">Turrubares</option>
+      <option value="117">Dota</option>
+      <option value="118">Curridabat</option>
+      <option value="119">Pérez Zeledón</option>
+      <option value="120">León Cortés</option>
+    </optgroup>
+    <optgroup>
+      <option value="201">Alajuela</option>
+      <option value="202">San Ramón</option>
+      <option value="203">Grecia</option>
+      <option value="204">San Mateo</option>
+      <option value="205">Atenas</option>
+      <option value="206">Naranjo</option>
+      <option value="207">Palmares</option>
+      <option value="208">Poás</option>
+      <option value="209">Orotina</option>
+      <option value="210">San Carlos</option>
+      <option value="211">Zarcero</option>
+      <option value="212">Valverde Vega</option>
+      <option value="213">Upala</option>
+      <option value="214">Los Chiles</option>
+      <option value="215">Guatuso</option>
+    </optgroup>
+    <optgroup>
+      <option value="301">Cartago</option>
+      <option value="302">Paraíso</option>
+      <option value="303">La Unión</option>
+      <option value="304">Jiménez</option>
+      <option value="305">Turrialba</option>
+      <option value="306">Alvarado</option>
+      <option value="307">Oreamuno</option>
+      <option value="308">El Guarco</option>
+		</optgroup>
+    <optgroup>
+      <option value="401">Heredia</option>
+      <option value="402">Barva</option>
+      <option value="403">Santo Domingo</option>
+      <option value="404">Santa Bárbara</option>
+      <option value="405">San Rafael</option>
+      <option value="406">San Isidro</option>
+      <option value="407">Belén</option>
+      <option value="408">Flores</option>
+      <option value="409">San Pablo</option>
+      <option value="410">Sarapiquí</option>
+		</optgroup>
+    <optgroup>
+      <option value="501">Limón</option>
+      <option value="502">Pococí</option>
+      <option value="503">Siquirres</option>
+      <option value="504">Talamanca</option>
+      <option value="505">Matina</option>
+      <option value="506">Guácimo</option>
+		</optgroup>
+    <optgroup>
+      <option value="601">Liberia</option>
+      <option value="602">Nicoya</option>
+      <option value="603">Santa Cruz</option>
+      <option value="604">Bagaces</option>
+      <option value="605">Carrillo</option>
+      <option value="606">Cañas</option>
+      <option value="607">Abangares</option>
+      <option value="608">Tilarán</option>
+      <option value="609">Nandayure</option>
+      <option value="610">La Cruz</option>
+      <option value="601">Hojancha</option>
+		</optgroup>
+    <optgroup>
+      <option value="701">Puntarenas</option>
+      <option value="702">Esparza</option>
+      <option value="703">Buenos Aires</option>
+      <option value="704">Montes de Oro</option>
+      <option value="705">Osa</option>
+      <option value="706">Quepos</option>
+      <option value="707">Golfito</option>
+      <option value="708">Coto Brus</option>
+      <option value="709">Parrita</option>
+      <option value="710">Corredores</option>
+      <option value="711">Garabito</option>
+    </optgroup>
+    
+    </select>
+    
+    </form>
+  
+  </div>
+	<div class="col-md-9">
+  
+  
+  <div id="actions">
+  <input type="checkbox" id="selectAll">
+<a class="action"><span class="glyphicon glyphicon-pencil" data-toggle="tooltip" title="Editar"></span></a>
+<a class="action"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" title="Eliminar"></span></a>
+<a class="action"><span class="glyphicon glyphicon-flag" data-toggle="tooltip" title="Marcar"></span></a>
+<a class="action"><span class="glyphicon glyphicon-tag" data-toggle="tooltip" title="Etiquetar"></span></a>
+<a class="action"><span class="glyphicon glyphicon-comment" data-toggle="tooltip" title="Comentar"></span></a>
+<a class="action"><span class="glyphicon glyphicon-eye-open" data-toggle="tooltip" title="Detalles"></span></a>
+<a class="action"><span class="glyphicon glyphicon-envelope" data-toggle="tooltip" title="Enviar"></span></a>
+  </div>
+  <table class="table table-striped" id="districList">
+  <tr><th>Distrito</th><th>Cantón</th><th colspan="2">Provincia</th></tr>
+    <tr>
+      <td data-province="1" data-county="101" data-district="10101"><input type="checkbox">Carmen</td>
+      <td>San José</td>
+      <td>San José</td>
+      <td><a class="action"><span class="glyphicon glyphicon-option-vertical"></span></a></a></td>
+    </tr>
+    <tr>
+      <td data-province="1" data-county="101" data-district="10111"><input type="checkbox">San Sebastián</td>
+      <td>San José</td>
+      <td>San José</td>
+      <td><a class="action"><span class="glyphicon glyphicon-option-vertical"></span></a></a></td>
+    </tr>
+    <tr>
+      <td data-province="2" data-county="207" data-district="20706"><input type="checkbox">Esquipulas</td>
+      <td>Palmares</td>
+      <td>Alajuela</td>
+      <td><a class="action"><span class="glyphicon glyphicon-option-vertical"></span></a></a></td>
+    </tr>    
+      <td data-province="3" data-county="302" data-district="30205"><input type="checkbox">Llanos de Santa Lucía</td>
+      <td>Paraíso</td>
+      <td>Cartago</td>
+      <td><a class="action"><span class="glyphicon glyphicon-option-vertical"></span></a></a></td>
+    </tr>    
+      <td data-province="4" data-county="404" data-district="40401"><input type="checkbox">Santa Bárbara</td>
+      <td>Santa Bárbara</td>
+      <td>Heredia</td>
+      <td><a class="action"><span class="glyphicon glyphicon-option-vertical"></span></a></a></td>
+    </tr>
+  </table>
+  <div class="text-center">
+   <ul class="pagination pagination-sm">
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+    </ul>
+   </div>
+  </div>
+
+
+</div>
+
+
+</div>
 
 {% endblock %}
